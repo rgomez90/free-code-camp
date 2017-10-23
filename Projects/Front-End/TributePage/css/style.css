@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  font-family: monochrom;
+  margin-top: 35px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: -20px;
+}
+
+.jumbotron {
+  background-color: rgb(211,211,211);
+}
+
+li {
+    text-align: left;
+
+}
