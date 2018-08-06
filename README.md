@@ -2,7 +2,7 @@
 Repo for the FCC exercises &amp; projects
 
 ## Responsive Web Design Projects
-* [Tribute Page](/Projects/Front-End/TributePage/)
+* Tribute Page    [Repo](/Projects/Front-End/TributePage/) || [Website](https://rgomez90.github.io/my-free-code-camp/Projects/Front-End/TributePage/)
 * [Survey Form]()
 * [Product Landing Page]()
 * [Technical Documentation Page]()
