@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Rafael Gomez - @rafagd90
+
+# THANKS
+
+    freeCodeCamp & its community
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Github Pages, jQuery, Modernizr, Normalize.css
