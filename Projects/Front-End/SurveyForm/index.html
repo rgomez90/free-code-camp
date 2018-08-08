@@ -18,6 +18,11 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <!-- Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Gothic" rel="stylesheet">
+
     <link rel="stylesheet" href="css/site.css">
     <!-- Open Graph & Twitter-->
     <!-- Twitter: see https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary for details -->
@@ -34,29 +39,160 @@
 </head>
 
 <body>
-    [if lte IE 9]>
+    <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an
         <strong>outdated</strong> browser. Please
         <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    [endif]
+    [endif]-->
+    <h1 id="title">Survey Form FreeCodeCamp</h1>
 
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
-
+    <div class="outer">
+        <p id="description">
+            <b>How do you watch NFL games?</b>
+        </p>
+        <form id="survey-form">
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="name-label" for="name">* Name: </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" name="name" id="name" class="input-field" placeholder="your name" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="email-label" for="email">* E-Mail: </label>
+                </div>
+                <div class="rightTab">
+                    <input  type="email" name="email" id="email" class="input-field" placeholder="your e-mail" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="gender-label" for="name">* Gender: </label>
+                </div>
+                <div class="rightTab">
+                    <select name="gender" id="dropdown" class="dropdown">
+                        <option disabled value>Select your gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="wf-label" for="watch-frequency">* How often do you watch NFL games in a week?: </label>
+                </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;">
+                        <li class="radio">
+                            <label>Everyday
+                                <input name="radio-buttons" value="1" type="radio" class="watch-frequency">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Many days
+                                <input name="radio-buttons" value="2" type="radio" class="watch-frequency">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>Only weekends
+                                <input name="radio-buttons" value="3" type="radio" class="watch-frequency">
+                            </label>
+                        </li>
+                    </ul>
+                    </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="number-label" for="games">* How many games do you watch in average per week?: </label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="number" min="1" max="16" name="games" id="number" class="input-field" placeholder="watched games per week" required>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label id="pf-label" for="played">* Do / did you play football at High-School?: </label>
+                </div>
+                <div class="rightTab">
+                    <ul style="list-style: none;">
+                        <li class="radio">
+                            <label>Yes
+                                <input name="radio-buttons" value="1" type="radio" class="played">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>No
+                                <input name="radio-buttons" value="2" type="radio" class="played">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>I never visited college
+                                <input name="radio-buttons" value="3" type="radio" class="played">
+                            </label>
+                        </li>
+                    </ul>
+                    </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="preferences">Do you watch other sports?: </label>
+                </div>
+                <div class="rightTab">
+                    <ul id="preferences" style="list-style: none;">
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="1" type="checkbox" class="userRatings">Soccer</label>
+                        </li>
+                        <li class="checkbox">
+                            <input name="prefer" value="2" type="checkbox" class="userRatings">Basketball</li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="3" type="checkbox" class="userRatings">Beisbol</label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="4" type="checkbox" class="userRatings">Hockey</label>
+                        </li>
+                        <li class="checkbox">
+                            <label>
+                                <input name="prefer" value="5" type="checkbox" class="userRatings">Other</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rowTab">
+                    <div class="labels">
+                        <label for="various">Do you watch other sports?: </label>
+                    </div>
+                    <div class="rightTab">
+                        <textarea id="various" class="input-field ta-various"></textarea>
+                    </div>
+                </div>
+            <button id="submit" class="submit-btn" type="submit">Submit</button>
+        </form>
+        <p> <b>Thank you for your time and participation. <br>We appreciate it!</b> <i class="fas fa-heart" ></i> </p>
+        <p>If you want, you can take a look at the <b><a href="https://cors-proxy.htmldriven.com/?url=http://rafaelgomez.me"><i class="fab fa-github" ></i> repo </a></b> for this project</p>
+    </div>
 
     <!-- SCRIPTS -->
     <script src="js/main.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109034947-2"></script>
     <script>
-        window.ga = function () {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-109034947-2', 'auto');
-        ga('send', 'pageview')
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-109034947-2');
     </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
 </body>
 
 </html>
